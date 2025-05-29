@@ -14,6 +14,6 @@ const isDevelopment = manifest.host_permissions?.includes(
   "http://localhost:3000/*"
 );
 
-export const API_BASE_URL = isDevelopment
+const API_BASE_URL = isDevelopment
   ? config.development.API_BASE_URL
   : config.production.API_BASE_URL;

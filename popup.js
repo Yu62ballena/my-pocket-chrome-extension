@@ -1,5 +1,4 @@
 // popup.js - 自動保存版
-import { API_BASE_URL } from './config.js';
 
 document.addEventListener("DOMContentLoaded", async function () {
   const status = document.getElementById("status");
@@ -27,7 +26,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 async function saveCurrentPage(tab) {
   try {
     // Next.jsアプリのAPIエンドポイントに送信
-    const response = await fetch(`${API_BASE_URL}/api/save-article`, {
+    const response = await fetch("http://localhost:3000/api/save-article", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
